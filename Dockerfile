@@ -41,7 +41,7 @@ RUN mkdir -p /etc/nginx/sites-enabled/ \
 VOLUME /etc/nginx/sites-enabled/
 VOLUME /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 80 81 82 83 84 86 87 88 89 90
 
 ENTRYPOINT [ "/bin/sh", "-c" ]
 CMD ["php-fpm5 -D && nginx -g 'daemon off;'"]
