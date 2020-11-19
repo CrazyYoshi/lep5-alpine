@@ -43,4 +43,5 @@ VOLUME /usr/share/nginx/html
 
 EXPOSE 80
 
-CMD ["nginx", "-g","daemon off;"]
+ENTRYPOINT [ "/bin/sh", "-c" ]
+CMD ["php-fpm5 -D && nginx -g 'daemon off;'"]
